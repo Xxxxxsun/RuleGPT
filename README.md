@@ -81,3 +81,38 @@ docker run --gpus ${DEVICE} --rm --name qwen \
 ```
 
 <br>
+
+## Output example
+
+for `Extract Basic Events`
+```
+Input: "Please extract basic events of the following rule: [original rule]",
+output: "[basic_event1, basic_event2, basic_event3,...]"
+```
+
+for `Extract the Logical Relation`
+```
+Input: "Given the rule [original rule] with basic events [basic_event1, basic_event2, basic_event3,...], provide the logical relation between these basic events",
+output: "[logical relation]"
+```
+
+Logical relation is represented as: `A&(B|C)`, where `A,B,C` represent basic events.
+
+for `Matching Syntactic Patterns`
+```
+Input: "Please determine the syntactic pattern of the following basic events: [basic_event1, basic_event2, basic_event3,...]",
+output: "[syntactic_pattern1,syntactic_pattern2,syntactic_pattern3,...]"
+```
+
+For the detail of syntactic pattern, please refer to our **[paper](https://arxiv.org/abs/2406.06600)**.
+
+
+## Cite
+```
+@article{sun2024horae,
+  title={HORAE: A Domain-Agnostic Modeling Language for Automating Multimodal Service Regulation},
+  author={Sun, Yutao and Chen, Mingshuai and Zhao, Kangjia and Li, He and Chen, Jintao and Yang, Linyu and Wang, Zhongyi and Zhao, Tiancheng and Yin, Jianwei},
+  journal={arXiv preprint arXiv:2406.06600},
+  year={2024}
+}
+```
